@@ -18,8 +18,10 @@ public class DaoProductoImplMemory implements DaoProducto{
 
 	@Override
 	public Producto update(Producto p) {
-		// TODO Auto-generated method stub
-		return null;
+	Producto aModificar = findOne(p.getCup());
+		if (aModificar != null)
+			delete(aModificar);
+		return create(p);
 	}
 
 	@Override

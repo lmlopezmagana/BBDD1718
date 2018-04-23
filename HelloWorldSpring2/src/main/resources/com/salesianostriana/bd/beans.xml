@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="objeto" class="com.salesianostriana.bd.HelloWorldSpring2.UnaClase">
+		<property name="propiedad1" value="Hola bicharracos"></property>
+		<property name="propiedad2" value="1.0"></property>
+	</bean>
+	
+	<bean id ="objeto2" class="com.salesianostriana.bd.HelloWorldSpring2.UnaClase">
+		<property name="propiedad1" value="Saludos, miarmitas"></property>
+		<property name="propiedad2" value="3.14"></property>	
+	</bean>
+
+</beans>

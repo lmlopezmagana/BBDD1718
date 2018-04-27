@@ -3,13 +3,14 @@ package com.salesianostriana.bd.daoconspring.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.salesianostriana.bd.daoconspring.dao.DaoProducto;
 import com.salesianostriana.bd.daoconspring.modelo.Producto;
 
 
-@Component
+//@Component
+@Repository
 public class DaoProductoImplMemory implements DaoProducto{
 
 	List<Producto> productos = new ArrayList<Producto>();

@@ -17,7 +17,7 @@ public class PrimerProyectoSpringJpaApplication {
 		return args -> {
 			
 			Entidad e = new Entidad();
-			e.setTexto("Hola mundo");
+			//e.setTexto("Hola mundo");
 			
 			Entidad e2 = servicio.save(e);
 			

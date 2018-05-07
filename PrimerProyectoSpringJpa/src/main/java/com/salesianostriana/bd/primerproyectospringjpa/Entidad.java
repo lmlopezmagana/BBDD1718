@@ -1,17 +1,26 @@
 package com.salesianostriana.bd.primerproyectospringjpa;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="ent")
 public class Entidad {
 	
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
+	@Column(name="txt")
 	private String texto;
+	
+	private String username;
+	
+	private String password;
+	
 	
 	
 	public Entidad() { }

@@ -25,10 +25,18 @@ public class AsociacionesApplication {
 			usuario = userService.save(usuario);
 			
 			Task task = new Task("Nueva tarea", "Estudiar JPA por un tubo", usuario);
-			task = taskService.save(task);
+			//task = taskService.save(task);
+			usuario.addTask(task);
+			
+			usuario = userService.save(usuario);
+			
 			
 			System.out.println(task.getUser().getFirstName());
 			
+			//usuario = userService.findOne(1L);
+			
+			//System.out.println(usuario.getTasks().size());
+			System.out.println(usuario);
 			
 		};
 	}

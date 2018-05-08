@@ -1,8 +1,14 @@
 package com.salesianostriana.bd.asociaciones.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -16,6 +22,13 @@ public class User {
 	private String lastName;
 	
 	private String email;
+	
+	// Indica que la asociación es Uno-A-Muchos
+	// El atributo mappedBy tiene como valor
+	// el nombre de la propiedad de la clase Task
+	// con la anotación @ManyToOne correspondiente
+	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, orphanRemoval=true)
+	private Set<Task> tasks = new HashSet<Task>();
 	
 	public User() { }
 
@@ -32,6 +45,14 @@ public class User {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Set<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(Set<Task> tasks) {
+		this.tasks = tasks;
 	}
 
 	public String getFirstName() {
@@ -100,6 +121,24 @@ public class User {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", tasks=" + tasks + "]";
+	}
+	
+	public void addTask(Task t) {
+		t.setUser(this);
+		this.getTasks().add(t);
+	}
+	
+	public void removeTask(Task t) {
+		this.getTasks().remove(t);
+		t.setUser(null);
+	}
+	
+	
 	
 	
 

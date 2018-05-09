@@ -41,7 +41,9 @@ public class OneToMany02Application {
 			System.out.println(f1);
 			System.out.println(f2);
 
-			Cliente c1 = clienteService.findOneConFacturas(c.getId());			
+			//Cliente c1 = clienteService.findOneConFacturas(c.getId());
+			Cliente c1 = clienteService.findOne(c.getId());
+			
 
 			System.out.println(c1);
 			

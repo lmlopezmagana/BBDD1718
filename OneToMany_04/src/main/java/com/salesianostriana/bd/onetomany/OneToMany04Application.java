@@ -29,12 +29,12 @@ public class OneToMany04Application {
 			c = clienteService.save(c);
 			
 			Factura f1 = new Factura(LocalDateTime.of(2018, 5, 2, 11, 00), "Café en la cafetería del colegio", 1.0f, c);
-			f1 = facturaService.save(f1);
+			//f1 = facturaService.save(f1);
 			f1.addLinea(new LineaDeFactura("Café con leche", 1.0f, f1));
 			f1 = facturaService.save(f1);
 
 			Factura f2 = new Factura(LocalDateTime.of(2018, 5, 3, 7, 30), "Café y tostada en la cafetería del colegio", 1.8f, c);
-			f2 = facturaService.save(f2);
+			//f2 = facturaService.save(f2);
 			f2.addLinea(new LineaDeFactura("Café con leche", 1.0f, f2));
 			f2.addLinea(new LineaDeFactura("Media tostada con aceite", 0.8f, f2));
 			f2 = facturaService.save(f2);

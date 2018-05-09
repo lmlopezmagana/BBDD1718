@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>SeguridadElemental01</name>
-	<description>Ejemplo de asociación ManyToMany unidireccional</description>
+	<description>Ejemplo básico de formulario de login sin usar Spring Security</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

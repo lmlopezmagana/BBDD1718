@@ -23,7 +23,6 @@ public class SecurityConfiguration {
 	@Bean
 	public FilterRegistrationBean<SecurityFilter> filterSecurityBean() {
 		FilterRegistrationBean<SecurityFilter> registro = new FilterRegistrationBean<>();
-		//registro.setFilter(securityFilter());
 		registro.setFilter(securityFilter());
 		registro.addUrlPatterns("/app/*");
 		registro.setName("securityFilter");

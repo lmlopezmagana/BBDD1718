@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Login page</h1>
-    <p th:if="${loginError}" class="error">Error en el usuario o contraseÃ±a</p>
+    <p th:if="${loginError}" class="error">Error en el usuario o contraseña</p>
     <form action="#" th:action="@{/checkLogin}" th:object="${loginUser}" method="post">
       <label for="username">Username</label>:
       <input type="text" id="username" name="username" autofocus="autofocus" th:field="*{usuario}" th:value="*{usuario}" /> <br />

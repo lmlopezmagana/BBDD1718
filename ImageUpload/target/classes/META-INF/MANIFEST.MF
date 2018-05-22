@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ImageUpload
+Implementation-Version: 0.1.0
+Built-By: luismi
+Implementation-Vendor-Id: com.salesianostriana
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://projects.spring.io/spring-boot/ImageUpload/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
